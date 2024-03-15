@@ -36,7 +36,7 @@ class _HotelHomePageState extends State<HotelHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Mi Hotel'),
+        title: const Text('EasyHotel'),
       ),
       drawer: Drawer(
         child: ListView(
@@ -44,7 +44,7 @@ class _HotelHomePageState extends State<HotelHomePage> {
           children: <Widget>[
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Color.fromARGB(255, 255, 185, 22),
               ),
               child: Text(
                 'Menú',
@@ -67,12 +67,12 @@ class _HotelHomePageState extends State<HotelHomePage> {
               onTap: () => _onCategorySelected('Habitaciones Deluxe'),
             ),
             ListTile(
-              title: const Text('Suite Presidencial'),
-              onTap: () => _onCategorySelected('Suite Presidencial'),
+              title: const Text('Suites Presidenciales'),
+              onTap: () => _onCategorySelected('Suites Presidenciales'),
             ),
             const Divider(),
             ListTile(
-              title: const Text('Información del Hotel'),
+              title: const Text('Sobre nosotros'),
               onTap: () => _onCategorySelected('Información del Hotel'),
             ),
           ],
@@ -87,7 +87,7 @@ class _HotelHomePageState extends State<HotelHomePage> {
       case 'Inicio':
         return const HotelHomePageContent();
       case 'Habitaciones Estándar':
-        return const RoomCategoryPage('Habitaciones Estándar', 'assets/habitacionsencilla');
+        return const RoomCategoryPage('Habitaciones Estándar', 'assets/images/habitacionsencilla.jpeg');
       case 'Habitaciones Deluxe':
         return const RoomCategoryPage('Habitaciones Deluxe', 'assets/habitaciondeluxe');
       case 'Suite Presidencial':
