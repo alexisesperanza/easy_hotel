@@ -67,8 +67,8 @@ class _HotelHomePageState extends State<HotelHomePage> {
               onTap: () => _onCategorySelected('Habitaciones Deluxe'),
             ),
             ListTile(
-              title: const Text('Suites Presidenciales'),
-              onTap: () => _onCategorySelected('Suites Presidenciales'),
+              title: const Text('Suite Presidencial'),
+              onTap: () => _onCategorySelected('Suite Presidencial'),
             ),
             const Divider(),
             ListTile(
@@ -87,9 +87,10 @@ class _HotelHomePageState extends State<HotelHomePage> {
       case 'Inicio':
         return const HotelHomePageContent();
       case 'Habitaciones Estándar':
-        return const RoomCategoryPage('Habitaciones Estándar', 'assets/images/habitacionsencilla.jpeg');
+        return const RoomCategoryPage(
+            'Habitaciones Estándar', 'assets/imagenes/habitacionsencilla.jpg');
       case 'Habitaciones Deluxe':
-        return const RoomCategoryPage('Habitaciones Deluxe', 'assets/habitaciondeluxe');
+        return const RoomCategoryPage('Habitaciones Deluxe', 'assets/habitaciondeluxe.jpg ');
       case 'Suite Presidencial':
         return const RoomCategoryPage('Suite Presidencial', 'assets/suitepresidencial');
       case 'Información del Hotel':
@@ -119,17 +120,55 @@ class RoomCategoryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return ListView(
+      children: List.generate(
+        5, // Número de habitaciones
+        (index) => RoomCard(
+          imageUrl: imagePath,
+          description: 'Descripción de la habitación $index',
+          onPressed: () {
+            // Lógica para reservar la habitación
+            // Puedes añadir aquí la lógica de navegación para ir a la pantalla de reserva
+          },
+        ),
+      ),
+    );
+  }
+}
+
+class RoomCard extends StatelessWidget {
+  final String imageUrl;
+  final String description;
+  final VoidCallback onPressed;
+
+  const RoomCard({super.key, 
+    required this.imageUrl,
+    required this.description,
+    required this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: const EdgeInsets.all(8.0),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(category, style: const TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 16.0),
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
           Image.asset(
-            imagePath,
-            height: 200.0,
-            width: 300.0,
+            imageUrl,
+            height: 200,
             fit: BoxFit.cover,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              description,
+              style: const TextStyle(fontSize: 16.0),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: onPressed,
+            child: const Text('Reservar'),
           ),
         ],
       ),
