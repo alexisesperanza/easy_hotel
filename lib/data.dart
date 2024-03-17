@@ -12,12 +12,12 @@ class Room {
 
 List<Room> standardRooms = [
   Room(
-    imageUrl: 'assets/standard_room1.jpg',
+    imageUrl: 'assets/imagenes/sd1.jpg',
     title: 'Habitación Estándar 1',
     description: 'Esta es una habitación estándar con una cama individual.',
   ),
   Room(
-    imageUrl: 'assets/standard_room2.jpg',
+    imageUrl: 'assets/imagenes/sd2.webp',
     title: 'Habitación Estándar 2',
     description: 'Esta es una habitación estándar con una cama doble.',
   ),
@@ -25,12 +25,12 @@ List<Room> standardRooms = [
 
 List<Room> deluxeRooms = [
   Room(
-    imageUrl: 'assets/deluxe_room1.jpg',
+    imageUrl: 'assets/imagenes/hd1.jpg',
     title: 'Habitación Deluxe 1',
     description: 'Esta es una habitación deluxe con vista al mar.',
   ),
   Room(
-    imageUrl: 'assets/deluxe_room2.jpg',
+    imageUrl: 'assets/imagenes/hd2.jpg',
     title: 'Habitación Deluxe 2',
     description: 'Esta es una habitación deluxe con jacuzzi.',
   ),

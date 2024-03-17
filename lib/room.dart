@@ -61,7 +61,7 @@ class RoomCard extends StatelessWidget {
                 SizedBox(height: 8.0),
                 ElevatedButton(
                   onPressed: () {
-                    // Lógica para reservar la habitación
+                    // Reservado Lógica para reservar la habitación
                   },
                   child: Text('Reservar'),
                 ),

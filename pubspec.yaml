@@ -60,10 +60,10 @@ uses-material-design: true
 
 # To add assets to your application, add an assets section, like this:
 assets:
-  - assets/
-  - assets/imagenes/habitacionsencilla.jpg
-  - /imagenes
-  - assets/habitaciondeluxe.jpg
+  - assets/imagenes/sd1.jpg
+  - assets/imagenes/sd2.webp
+  - assets/imagenes/hd1.jpg
+  - assets/imagenes/hd2.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
