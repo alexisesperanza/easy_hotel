@@ -65,6 +65,11 @@ class _HotelHomePageState extends State<HotelHomePage> {
             ),
             const Divider(),
             ListTile(
+              title: const Text('Inicia sesion/Registrate'),
+              onTap: () => _onCategorySelected('Iniciar Sesion'),
+            ),
+
+            ListTile(
               title: const Text('Sobre nosotros'),
               onTap: () => _onCategorySelected('Información del Hotel'),
             ),
@@ -94,8 +99,13 @@ class _HotelHomePageState extends State<HotelHomePage> {
           category: 'Suites Presidenciales',
           rooms: presidentialSuites,
         );
+
       case 'Información del Hotel':
         return const HotelInfoPage();
+
+      case 'Iniciar Sesion':
+        return const LoginPage();
+
       default:
         return const HotelHomePageContent();
     }
