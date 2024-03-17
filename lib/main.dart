@@ -1,22 +1,15 @@
 import 'package:flutter/material.dart';
+import 'room.dart';
+import 'data.dart';
 
 void main() {
-  runApp(const MyHotelApp());
-}
-
-class MyHotelApp extends StatelessWidget {
-  const MyHotelApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HotelHomePage(),
-    );
-  }
+  runApp(MaterialApp(
+    home: HotelHomePage(),
+  ));
 }
 
 class HotelHomePage extends StatefulWidget {
-  const HotelHomePage({super.key});
+  const HotelHomePage({Key? key}) : super(key: key);
 
   @override
   _HotelHomePageState createState() => _HotelHomePageState();
@@ -67,8 +60,8 @@ class _HotelHomePageState extends State<HotelHomePage> {
               onTap: () => _onCategorySelected('Habitaciones Deluxe'),
             ),
             ListTile(
-              title: const Text('Suite Presidencial'),
-              onTap: () => _onCategorySelected('Suite Presidencial'),
+              title: const Text('Suites Presidenciales'),
+              onTap: () => _onCategorySelected('Suites Presidenciales'),
             ),
             const Divider(),
             ListTile(
@@ -87,12 +80,20 @@ class _HotelHomePageState extends State<HotelHomePage> {
       case 'Inicio':
         return const HotelHomePageContent();
       case 'Habitaciones Estándar':
-        return const RoomCategoryPage(
-            'Habitaciones Estándar', 'assets/imagenes/habitacionsencilla.jpg');
+        return RoomCategoryPage(
+          category: 'Habitaciones Estándar',
+          rooms: standardRooms,
+        );
       case 'Habitaciones Deluxe':
-        return const RoomCategoryPage('Habitaciones Deluxe', 'assets/habitaciondeluxe.jpg ');
-      case 'Suite Presidencial':
-        return const RoomCategoryPage('Suite Presidencial', 'assets/suitepresidencial');
+        return RoomCategoryPage(
+          category: 'Habitaciones Deluxe',
+          rooms: deluxeRooms,
+        );
+      case 'Suites Presidenciales':
+        return RoomCategoryPage(
+          category: 'Suites Presidenciales',
+          rooms: presidentialSuites,
+        );
       case 'Información del Hotel':
         return const HotelInfoPage();
       default:
@@ -102,87 +103,12 @@ class _HotelHomePageState extends State<HotelHomePage> {
 }
 
 class HotelHomePageContent extends StatelessWidget {
-  const HotelHomePageContent({super.key});
+  const HotelHomePageContent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return const Center(
       child: Text('Bienvenido al Hotel', style: TextStyle(fontSize: 24.0)),
-    );
-  }
-}
-
-class RoomCategoryPage extends StatelessWidget {
-  final String category;
-  final String imagePath;
-
-  const RoomCategoryPage(this.category, this.imagePath, {super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      children: List.generate(
-        5, // Número de habitaciones
-        (index) => RoomCard(
-          imageUrl: imagePath,
-          description: 'Descripción de la habitación $index',
-          onPressed: () {
-            // Lógica para reservar la habitación
-            // Puedes añadir aquí la lógica de navegación para ir a la pantalla de reserva
-          },
-        ),
-      ),
-    );
-  }
-}
-
-class RoomCard extends StatelessWidget {
-  final String imageUrl;
-  final String description;
-  final VoidCallback onPressed;
-
-  const RoomCard({super.key, 
-    required this.imageUrl,
-    required this.description,
-    required this.onPressed,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.all(8.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Image.asset(
-            imageUrl,
-            height: 200,
-            fit: BoxFit.cover,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              description,
-              style: const TextStyle(fontSize: 16.0),
-            ),
-          ),
-          ElevatedButton(
-            onPressed: onPressed,
-            child: const Text('Reservar'),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class HotelInfoPage extends StatelessWidget {
-  const HotelInfoPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Información del Hotel', style: TextStyle(fontSize: 24.0)),
     );
   }
 }
