@@ -38,12 +38,12 @@ List<Room> deluxeRooms = [
 
 List<Room> presidentialSuites = [
   Room(
-    imageUrl: 'assets/presidential_suite1.jpg',
+    imageUrl: 'assets/imagenes/sp1.jpg',
     title: 'Suite Presidencial 1',
     description: 'Esta es una suite presidencial con sala de estar y balcón privado.',
   ),
   Room(
-    imageUrl: 'assets/presidential_suite2.jpg',
+    imageUrl: 'assets/imagenes/sp2.jpg',
     title: 'Suite Presidencial 2',
     description: 'Esta es una suite presidencial con piscina privada y vistas panorámicas.',
   ),
