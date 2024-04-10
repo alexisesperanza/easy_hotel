@@ -9,13 +9,13 @@
             "request": "launch",
             "type": "msedge",
             "url": "http://localhost:8080",
-            "webRoot": "lib/events/main.dart"
+            "webRoot": "lib/states/main.dart"
         },
         {
             "name": "Flutter",
             "type": "dart",
             "request": "launch",
-            "program": "lib/events/main.dart"
+            "program": "lib/states/main.dart"
         },
         {
             "name": "Flutter: Run all Tests",
@@ -27,7 +27,7 @@
             "name": "easy_hotel",
             "request": "launch",
             "type": "dart",
-            "program": "lib/events/main.dart"
+            "program": "lib/states/main.dart"
         },
         {
             "name": "easy_hotel (profile mode)",
