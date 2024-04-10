@@ -12,7 +12,7 @@ class Room {
 
 List<Room> standardRooms = [
   Room(
-    imageUrl: 'assets/imagenes/sd1.jpg',
+    imageUrl: 'assets/prueba.png',
     title: 'Habitación Estándar 1',
     description: 'Esta es una habitación estándar con una cama individual.',
   ),

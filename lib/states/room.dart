@@ -40,7 +40,7 @@ class RoomCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Image.asset(
-            room.imageUrl,
+            'assets/prueba.png',
             height: 200,
             fit: BoxFit.cover,
           ),
