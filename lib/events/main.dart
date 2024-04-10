@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'events/room.dart';
-import 'events/data.dart';
+import 'room.dart';
+import 'data.dart';
 
 void main() {
   runApp(MaterialApp(

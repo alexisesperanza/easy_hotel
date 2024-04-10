@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:easy_hotel/main.dart';
+import 'package:easy_hotel/events/main.dart';
 
 void main() {
   testWidgets('HotelHomePage muestra correctamente el título', (WidgetTester tester) async {

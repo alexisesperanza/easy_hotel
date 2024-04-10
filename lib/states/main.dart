@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'events/room.dart';
-import 'events/data.dart';
+import 'package:easy_hotel/events/room.dart';
+import 'package:easy_hotel/events/data.dart';
 
 void main() {
   runApp(MaterialApp(
