@@ -66,7 +66,7 @@ class _HotelHomePageState extends State<HotelHomePage> {
             const Divider(),
             ListTile(
               title: const Text('Sobre Nosotros'),
-              onTap: () => _onCategorySelected('Sobre nosotros'),
+              onTap: () => _onCategorySelected('Sobre Nosotros'),
             ),
              ListTile(
               title: const Text('Iniciar Sesion/Registrarse'),
