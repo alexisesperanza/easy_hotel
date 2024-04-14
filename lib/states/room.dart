@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../businesslogic/data.dart';
+import 'hotel.dart';
 
 class RoomCategoryPage extends StatelessWidget {
   final String category;
@@ -63,9 +64,12 @@ class RoomCard extends StatelessWidget {
                 SizedBox(height: 8.0),
                 ElevatedButton(
                   onPressed: () {
-                    // Reservado Lógica para reservar la habitación
+                    Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HotelScreen()),
+            );
                   },
-                  child: Text('Reservar'),
+                  child: Text('Visitar hotel'),
                 ),
               ],
             ),
@@ -163,4 +167,18 @@ class HotelInfoPage extends StatelessWidget {
       child: Text('Información del Hotel', style: TextStyle(fontSize: 24.0)),
     );
   }
+}
+
+class HotelPromotion {
+  final String hotelName;
+  final String promotionTitle;
+  final String promotionDescription;
+  final String imageUrl;
+
+  HotelPromotion({
+    required this.hotelName,
+    required this.promotionTitle,
+    required this.promotionDescription,
+    required this.imageUrl,
+  });
 }

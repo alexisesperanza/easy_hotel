@@ -21,6 +21,7 @@ class _HotelHomePageState extends State<HotelHomePage> {
   void _onCategorySelected(String category) {
     setState(() {
       _selectedCategory = category;
+      
     });
     Navigator.pop(context); // Cerrar el menú desplegable lateral
   }
@@ -66,7 +67,7 @@ class _HotelHomePageState extends State<HotelHomePage> {
             const Divider(),
             ListTile(
               title: const Text('Sobre Nosotros'),
-              onTap: () => _onCategorySelected('Sobre Nosotros'),
+              onTap: () => _onCategorySelected('Sobre nosotros'),
             ),
              ListTile(
               title: const Text('Iniciar Sesion/Registrarse'),

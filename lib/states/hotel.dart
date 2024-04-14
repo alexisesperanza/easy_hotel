@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
+import '../businesslogic/data.dart';
+
+// Clase para representar los datos del hotel
+class Hotel {
+  final String title;
+  final String description;
+  final String imageUrl;
+
+  Hotel({required this.title, required this.description, required this.imageUrl});
+}
 
 class HotelScreen extends StatelessWidget {
+  // Lista de hoteles de ejemplo
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,10 +24,10 @@ class HotelScreen extends StatelessWidget {
         children: [
           Container(
             height: 100, // Altura del banner
-            color: Color.fromARGB(255, 172, 145, 81), // Color del banner
+            color: Color.fromARGB(255, 112, 191, 255), // 
             child: Center(
               child: Text(
-                'Banner Superior Fijo',
+                'Nombre o banner del hotel',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
@@ -24,10 +37,29 @@ class HotelScreen extends StatelessWidget {
           ),
           Expanded(
             child: ListView.builder(
-              itemCount: 10, // Número de habitaciones, puedes cambiar esto según tus necesidades
+              itemCount: hotels.length,
               itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text('Habitación ${index + 1}'),
+                return Card(
+                  child: Column(
+                    children: [
+                      Image.network(
+                        hotels[index].imageUrl,
+                        fit: BoxFit.cover,
+                        height: 200,
+                        width: double.infinity,
+                      ),
+                      ListTile(
+                        title: Text(hotels[index].title),
+                        subtitle: Text(hotels[index].description),
+                        trailing: ElevatedButton(
+                          onPressed: () {
+                            // Acción al presionar el botón de reservar
+                          },
+                          child: Text('Reservar'),
+                        ),
+                      ),
+                    ],
+                  ),
                 );
               },
             ),

@@ -1,3 +1,4 @@
+import '../states/hotel.dart';
 class Room {
   final String imageUrl;
   final String title;
@@ -48,3 +49,17 @@ List<Room> Lujo = [
     description: 'Admira vistas panorámicas desde este palacio de lujo, donde cada detalle ha sido cuidadosamente diseñado para ofrecerte una experiencia excepcionalmente lujosa y memorable..',
   ),
 ];
+
+  final List<Hotel> hotels = [
+    Hotel(
+      title: 'Habitacion sencilla',
+      description: 'Habitacion economica con acceso a comodidades basicas, servicios extra se pagan por separado.',
+      imageUrl: 'assets/prueba.png',
+    ),
+    Hotel(
+      title: 'Habitacion doble',
+      description: 'Habitacion con acomodacion doble con acomodacion sencilla, servicios extra se pagan por separado.',
+      imageUrl: 'assets/prueba.png',
+    ),
+
+  ];
