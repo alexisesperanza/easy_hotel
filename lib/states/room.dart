@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'data.dart';
+import '../businesslogic/data.dart';
 
 class RoomCategoryPage extends StatelessWidget {
   final String category;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'room.dart';
-import 'data.dart';
+import '../businesslogic/data.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -37,7 +37,7 @@ class _HotelHomePageState extends State<HotelHomePage> {
           children: <Widget>[
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 255, 185, 22),
+                color: Color.fromARGB(255, 150, 141, 121),
               ),
               child: Text(
                 'Menú',
