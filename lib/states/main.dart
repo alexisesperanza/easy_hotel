@@ -52,21 +52,25 @@ class _HotelHomePageState extends State<HotelHomePage> {
               onTap: () => _onCategorySelected('Inicio'),
             ),
             ListTile(
-              title: const Text('Habitaciones Estándar'),
-              onTap: () => _onCategorySelected('Habitaciones Estándar'),
+              title: const Text('Hoteles Económicos'),
+              onTap: () => _onCategorySelected('Hoteles Económicos'),
             ),
             ListTile(
-              title: const Text('Habitaciones Deluxe'),
-              onTap: () => _onCategorySelected('Habitaciones Deluxe'),
+              title: const Text('Hoteles Estándar'),
+              onTap: () => _onCategorySelected('Hoteles Estándar'),
             ),
             ListTile(
-              title: const Text('Suites Presidenciales'),
-              onTap: () => _onCategorySelected('Suites Presidenciales'),
+              title: const Text('Hoteles De Lujo'),
+              onTap: () => _onCategorySelected('Hoteles De Lujo'),
             ),
             const Divider(),
             ListTile(
-              title: const Text('Sobre nosotros'),
-              onTap: () => _onCategorySelected('Información del Hotel'),
+              title: const Text('Sobre Nosotros'),
+              onTap: () => _onCategorySelected('Sobre nosotros'),
+            ),
+             ListTile(
+              title: const Text('Iniciar Sesion/Registrarse'),
+              onTap: () => _onCategorySelected('LoginRegister'),
             ),
           ],
         ),
@@ -79,23 +83,27 @@ class _HotelHomePageState extends State<HotelHomePage> {
     switch (_selectedCategory) {
       case 'Inicio':
         return const HotelHomePageContent();
-      case 'Habitaciones Estándar':
+      case 'Hoteles Económicos':
         return RoomCategoryPage(
-          category: 'Habitaciones Estándar',
-          rooms: standardRooms,
+          category: 'Hoteles Económicos',
+          rooms: Economico,
         );
-      case 'Habitaciones Deluxe':
+      case 'Hoteles Estándar':
         return RoomCategoryPage(
-          category: 'Habitaciones Deluxe',
-          rooms: deluxeRooms,
+          category: 'Hoteles Estándar',
+          rooms: Estandar,
         );
-      case 'Suites Presidenciales':
+      case 'Hoteles De Lujo':
         return RoomCategoryPage(
-          category: 'Suites Presidenciales',
-          rooms: presidentialSuites,
+          category: 'Hoteles De Lujo',
+          rooms: Lujo,
         );
-      case 'Información del Hotel':
+      case 'Sobre Nosotros':
         return const HotelInfoPage();
+
+      case 'LoginRegister':
+        return const LoginForm();
+      
       default:
         return const HotelHomePageContent();
     }

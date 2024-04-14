@@ -10,7 +10,7 @@ class Room {
   });
 }
 
-List<Room> standardRooms = [
+List<Room> Economico = [
   Room(
     imageUrl: 'assets/prueba.png',
     title: 'Habitación Estándar 1',
@@ -23,7 +23,7 @@ List<Room> standardRooms = [
   ),
 ];
 
-List<Room> deluxeRooms = [
+List<Room> Estandar = [
   Room(
     imageUrl: 'assets/imagenes/hd1.jpg',
     title: 'Habitación Deluxe 1',
@@ -36,7 +36,7 @@ List<Room> deluxeRooms = [
   ),
 ];
 
-List<Room> presidentialSuites = [
+List<Room> Lujo = [
   Room(
     imageUrl: 'assets/imagenes/sp1.jpg',
     title: 'Suite Presidencial 1',
