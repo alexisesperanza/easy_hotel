@@ -134,7 +134,7 @@ class _LoginFormState extends State<LoginForm> {
               final String password = _passwordController.text;
               print('Usuario: $username');
               print('Contraseña: $password');
-              // Logica/ validacion de usuarrio
+              // Logica/ validacion de usuario
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
