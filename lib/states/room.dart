@@ -31,6 +31,8 @@ class RoomCard extends StatelessWidget {
   final Room room;
 
   const RoomCard({required this.room});
+  
+   String? get imageUrl => room.imageUrl; 
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +42,7 @@ class RoomCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Image.asset(
-            'assets/prueba.png',
+            imageUrl!,
             height: 200,
             fit: BoxFit.cover,
           ),

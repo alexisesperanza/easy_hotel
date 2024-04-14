@@ -13,38 +13,38 @@ class Room {
 List<Room> Economico = [
   Room(
     imageUrl: 'assets/prueba.png',
-    title: 'Habitación Estándar 1',
-    description: 'Esta es una habitación estándar con una cama individual.',
+    title: 'SimpleStay Hotel',
+    description: 'Experimenta la simplicidad y la comodidad en nuestro hotel diseñado para viajeros conscientes del presupuesto. Con habitaciones prácticas y una atmósfera acogedora, te proporcionamos todo lo necesario para una estancia sin complicaciones a un precio que te sorprenderá.',
   ),
   Room(
-    imageUrl: 'assets/imagenes/sd2.webp',
-    title: 'Habitación Estándar 2',
-    description: 'Esta es una habitación estándar con una cama doble.',
+    imageUrl:  'assets/prueba.png',
+    title: 'PennySaver Lodge',
+    description: 'Descubre el equilibrio perfecto entre calidad y precio en nuestro acogedor hotel. Con tarifas económicas y un ambiente cálido, te ofrecemos una estancia sin complicaciones para que disfrutes al máximo de tu viaje.',
   ),
 ];
 
 List<Room> Estandar = [
   Room(
-    imageUrl: 'assets/imagenes/hd1.jpg',
-    title: 'Habitación Deluxe 1',
-    description: 'Esta es una habitación deluxe con vista al mar.',
+    imageUrl: 'assets/prueba.png',
+    title: 'Majestic Inn',
+    description: 'Descubre la grandeza de una estancia majestuosa en nuestro hotel, donde la arquitectura impresionante y el servicio excepcional se unen para crear una experiencia verdaderamente inolvidable.',
   ),
   Room(
-    imageUrl: 'assets/imagenes/hd2.jpg',
-    title: 'Habitación Deluxe 2',
-    description: 'Esta es una habitación deluxe con jacuzzi.',
+    imageUrl: 'assets/prueba.png',
+    title: 'Imperial Hotel',
+    description: 'Descubre el esplendor de una era pasada en nuestro hotel imperial, donde el encanto clásico se combina con las comodidades modernas para ofrecerte una experiencia de hospedaje verdaderamente única.',
   ),
 ];
 
 List<Room> Lujo = [
   Room(
-    imageUrl: 'assets/imagenes/sp1.jpg',
-    title: 'Suite Presidencial 1',
-    description: 'Esta es una suite presidencial con sala de estar y balcón privado.',
+    imageUrl: 'assets/prueba.png',
+    title: 'Azure Horizon Resort',
+    description: 'Descubre un paraíso de opulencia frente al mar, donde la atención personalizada y las instalaciones exclusivas te transportarán a un mundo de placer y confort.',
   ),
   Room(
-    imageUrl: 'assets/imagenes/sp2.jpg',
-    title: 'Suite Presidencial 2',
-    description: 'Esta es una suite presidencial con piscina privada y vistas panorámicas.',
+    imageUrl: 'assets/prueba.png',
+    title: 'Platinum Panorama Palace',
+    description: 'Admira vistas panorámicas desde este palacio de lujo, donde cada detalle ha sido cuidadosamente diseñado para ofrecerte una experiencia excepcionalmente lujosa y memorable..',
   ),
 ];
